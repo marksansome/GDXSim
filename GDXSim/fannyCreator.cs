@@ -9,15 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication4
+namespace GDXSim
 {
-    public partial class Form1 
+    public class FannyCreator
     {
         List<PictureBox> fannys = new List<PictureBox>();
 
-        public void createfannys (int fannyNum)
+        public void createfannys(int fannyNum)
         {
-            panel1.Controls.Clear();
+            //panel1.Controls.Clear();
             fannys.Clear();
             int yMod = 0;
             int xMod = 0;
@@ -26,17 +26,17 @@ namespace WindowsFormsApplication4
             // int yBounds = 390; 
             if (fannyNum > 2090)
             {
-                sizeMod = sizeMod / 5; 
+                sizeMod = sizeMod / 5;
             }
             else if (fannyNum > 468)
             {
-                sizeMod = sizeMod / 4; 
+                sizeMod = sizeMod / 4;
             }
             else if (fannyNum > 117)
             {
                 sizeMod = sizeMod / 2;
             }
-            
+
             int xLocation = 0;
             for (int j = 0; j < fannyNum; j++)
             {
@@ -48,10 +48,10 @@ namespace WindowsFormsApplication4
                 if (xMod == 270 / sizeMod)
                 {
                     yMod++;
-                    xMod= 0; 
+                    xMod = 0;
                 }
-                
-                 xLocation = sizeMod * xMod;
+
+                xLocation = sizeMod * xMod;
                 int yLocation = sizeMod * yMod;
                 /*if (j % 9 == 0)
                 {
@@ -72,15 +72,16 @@ namespace WindowsFormsApplication4
                 pictureBox.Location = new Point(xLocation, yLocation);
 
                 pictureBox.Name = "fanny" + fannyNum;
-                
+
                 pictureBox.TabIndex = 0;
                 pictureBox.TabStop = false;
                 pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
                 pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                pictureBox.Parent = panel1;
-                pictureBox.Image = global::WindowsFormsApplication4.Properties.Resources.img;
+                //  pictureBox.Parent = panel1;
+                // pictureBox.Image = global::WindowsFormsApplication4.Properties.Resources.img;
                 xMod++;
             }
         }
     }
 }
+

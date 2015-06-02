@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace GDXSim
 {
-    class Algorithm
+    public class Algorithm
     {
 
         public static double fx; //last calculated value

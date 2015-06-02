@@ -16,5 +16,12 @@ namespace GDXSim
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Selector selector = new Selector();
+            selector.Show();
+            this.Hide();
+        }
     }
 }
