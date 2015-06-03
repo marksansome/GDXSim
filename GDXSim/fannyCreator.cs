@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GDXSim
 {
-    public class FannyCreator
+    public partial class ExponentialForm
     {
         List<PictureBox> fannys = new List<PictureBox>();
 
@@ -77,11 +77,10 @@ namespace GDXSim
                 pictureBox.TabStop = false;
                 pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
                 pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                //  pictureBox.Parent = panel1;
-                // pictureBox.Image = global::WindowsFormsApplication4.Properties.Resources.img;
+                pictureBox.Parent = panel1;
+                pictureBox.Image = global::GDXSim.Properties.Resources.fanny_left;
                 xMod++;
             }
         }
     }
 }
-
