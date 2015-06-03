@@ -20,10 +20,7 @@ namespace GDXSim
 
         public static double CalculateFX(String cmd, double[] args)
         {
-            switch (cmd)
-            {
-                //cases
-            }
+            ex(cmd,args);
 
             return fx;
         }
@@ -39,9 +36,9 @@ namespace GDXSim
             //check for exponential growth or decay
             double rate; //the rate at which it increases
             if (cmd.Equals("growth"))
-                rate = 1 + (args[4] / 100); //exponential growth
+                rate = 1 + (args[3] / 100); //exponential growth
             else
-                rate = 1 - (args[4] / 100); //exponential decay
+                rate = 1 - (args[3] / 100); //exponential decay
 
             //calculate
             temp = Math.Pow(rate, k);

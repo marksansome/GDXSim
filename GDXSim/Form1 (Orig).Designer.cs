@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication4
+﻿namespace GDXSim
 {
     partial class Form1
     {
