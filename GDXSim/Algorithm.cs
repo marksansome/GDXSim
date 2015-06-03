@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 /*
  * Created by Nandiola17    
  * Dev started on 21st May, 2015
- * Version 2.0 
+ * Version 2.1
+ * Clarity changes, updated descriptions
  */
 
 namespace GDXSim
@@ -16,19 +17,58 @@ namespace GDXSim
     public class Algorithm
     {
 
-        public static double fx; //last calculated value
+        //holds last calculated value accessible by the program
+        public static double fx;
+        
+        //TEMPLATE METHOD DO NOT USE
+        public static double CalculateX(String cmd, double[] args)
+        {
+            double temp;
+
+            switch (cmd)
+            {
+                case "growth": ex_("growth", args);
+                    break;
+                case "decay": ex_("decay", args);
+                    break;
+                case "sin": trig_("sin", args);
+                    break;
+                case "cos": trig_("cos", args);
+                    break;
+                case "tan": trig_("tan", args);
+                    break;
+            }
+
+            return 0;
+        }
 
         public static double CalculateFX(String cmd, double[] args)
         {
             switch (cmd)
             {
-                //cases
+                case "growth": ex("growth", args);
+                    break;
+                case "decay": ex("decay", args);
+                    break;
+                case "sin": trig("sin", args);
+                    break;
+                case "cos": trig("cos", args);
+                    break;
+                case "tan": trig("tan", args);
+                    break;
             }
 
             return fx;
         }
 
-        public static double ex(String cmd, double[] args)
+        /// <summary>
+        /// Calculates exponential equations for value F(x)
+        /// </summary>
+        /// <param name="cmd">Whether the equation is exponential decay or exponential growth.</param>
+        /// <param name="args">Array of doubles holding the parameters for the equation.
+        /// [0] is the orginal amount; [1] is time elapsed, [2] is the time period, [3] is the rate</param>
+        /// <returns>f(x)</returns>
+        private static double ex(String cmd, double[] args)
         {
             double temp = 0;
             double xo = args[0]; //original amount
@@ -39,9 +79,9 @@ namespace GDXSim
             //check for exponential growth or decay
             double rate; //the rate at which it increases
             if (cmd.Equals("growth"))
-                rate = 1 + (args[4] / 100); //exponential growth
+                rate = 1 + (args[3] / 100); //exponential growth
             else
-                rate = 1 - (args[4] / 100); //exponential decay
+                rate = 1 - (args[3] / 100); //exponential decay
 
             //calculate
             temp = Math.Pow(rate, k);
@@ -51,47 +91,53 @@ namespace GDXSim
             return temp;
         }
 
-
-        public static double Sin(String cmd, double[] args)
+        private static double ex_(String cmd, double[] args)
         {
-            double sin;
-            double angle = args[0];
-
-            if (!(cmd.Equals("degrees")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
-
-            //calculate sin
-            sin = Math.Sin(angle);
-
-            return sin;
+            double x;
+            double fx;
+            return 0;
         }
 
-        public static double Cos(String cmd, double[] args)
+        /// <summary>
+        /// Calculates trig equations for value F(x)
+        /// </summary>
+        /// <param name="cmd">Calculate sin, cos or tan depending on the value of the 'cmd' string.</param>
+        /// <param name="args"> Array contains all args required by the algorithm.
+        /// [0] holds the angle theta, [1] holds the horizontal shift, [2] holds the vertical shift, [3] holds the period, [4] holds amplitude</param>
+        /// <returns></returns>
+        private static double trig(String cmd, double[] args)
         {
-            double cos;
-            double angle = args[0];
+            double answer;
+            double angle = args[0]; double HS = args[1]; double VS = args[2]; double period = args[3]; double amp = args[4];
 
-            if (!(cmd.Equals("radians")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
+            //add horizontal components
+            angle = angle / period;
+            angle = angle + HS;
 
-            //calculate cos
-            cos = Math.Cos(angle);
+            switch (cmd)
+            {
+                case "sin": answer = Math.Sin(angle);
+                    break;
+                case "cos": answer = Math.Cos(angle);
+                    break;
+                case "tan": answer = Math.Tan(angle);
+                    break;
+            }
+            
+            //add vertical components
+            answer = angle + VS;
+            answer = answer * amp;
 
-            return cos;
+            return answer;
+
         }
 
-        public static double Tan(String cmd, double[] args)
+        //TEMPLATE METHOD DO NOT USE
+        private static double trig_(String cmd, double[] args)
         {
-            double tan;
-            double angle = args[0];
-
-            if (!(cmd.Equals("radians")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
-
-            //calculate sin
-            tan = Math.Atan(angle);
-
-            return tan;
+            double x;
+            double fx;
+            return 0;
         }
     }
 }
