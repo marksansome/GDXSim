@@ -15,17 +15,6 @@ namespace GDXSim
     {
         List<PictureBox> fannys = new List<PictureBox>();
 
-        #region Set image and sound
-        String[,] types = new String[,] { { "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Fanny/img.jpg", "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Fanny/sound.wav" }, { "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Cash/img.jpg", "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Bacteria/sound.wav" }, { "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Monkeys/img.jpg", "C:/Users/marks/Documents/Visual Studio 2015/Projects/GDXSim/WindowsFormsApplication4/Cases/Monkeys/sound.wav" } };
-        String[] current1 = new String[2] { "/Cases/Fanny/img.jpg", "/Cases/Fanny/sound.wav" };
-        int imageCounter = 0;
-        public void switchCurrent()
-        {
-            current1[1] = types[imageCounter, 1];
-            current1[0] = types[imageCounter, 0];
-        }
-        #endregion
-
         public ExponentialForm()
         {
             InitializeComponent();
@@ -33,19 +22,25 @@ namespace GDXSim
 
         #region Variables
         Boolean decay, roundToInt;
-        double xo, t, period, rate, y;
+        double xo, t, period, rate;
+        int fx;
         int counter = 0;
+        string ex = "growth";
         #endregion
 
         #region Timer
         private void timer1_Tick(object sender, EventArgs e)
         {
+            double [] a = {xo, counter, period, rate};
+            
             //double oldFx = GDXSim.Algorithm.fx;
             //y = GDXSim.Algorithm.CalculateFX();
-            chart1.Series["Series1"].Points.AddXY(counter, 10+counter);
+            fx = Algorithm.CalculateFX(ex, a);
+            Console.WriteLine(fx);
+            chart1.Series["Series1"].Points.AddXY(counter, fx);
 
             Random rnd = new Random();
-            createfannys(10 + counter);
+            createfannys(fx);
             
             if (counter >= t)
             {
@@ -89,39 +84,15 @@ namespace GDXSim
             period = 1;
         }
 
-        private void domainUpDown2_SelectedItemChanged(object sender, EventArgs e)
-        {
-            if (domainUpDown2.Text.Equals("Fanny"))
-            {
-                imageCounter = 0;
-                switchCurrent();
-            }
-            else if (domainUpDown2.Text.Equals("Monkey"))
-            {
-                imageCounter = 3;
-                switchCurrent();
-            }
-            else if (domainUpDown2.Text.Equals("Bacteria"))
-            {
-                imageCounter = 2;
-                switchCurrent();
-            }
-            else if (domainUpDown2.Text.Equals("Cash"))
-            {
-                imageCounter = 1;
-                switchCurrent();
-            }
-        }
-
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)//Growth/Decay
         {
             if (domainUpDown1.Text.Equals("Decay"))
             {
-                decay = true;
+                ex = "decay";
             }
             else if (domainUpDown1.Text.Equals("Growth"))
             {
-                decay = false;
+                ex = "growth";
             }
         }
 
@@ -136,7 +107,7 @@ namespace GDXSim
             chart1.Series["Series1"].Points.Clear();
             counter = 0;
 
-            y = 0;
+            fx = 0;
             panel1.Controls.Clear();
             fannys.Clear();
         }

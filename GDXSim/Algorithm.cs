@@ -13,18 +13,29 @@ using System.Threading.Tasks;
 
 namespace GDXSim
 {
-    public class Algorithm
+    class Algorithm
     {
 
-        public static double fx; //last calculated value
+        public static int fx; //last calculated value
 
-        public static double CalculateFX(String cmd, double[] args)
+        public static int CalculateFX(String cmd, double[] args)
         {
+            double temp = 0;
             switch (cmd)
             {
-                //cases
+                case "sin": temp = trig(cmd, args);
+                    break;
+                case "cos": temp = trig(cmd, args);
+                    break;
+                case "tan": temp = trig(cmd, args);
+                    break;
+                case "growth": temp = ex(cmd, args);
+                    break;
+                case "decay": temp = ex(cmd, args);
+                    break;
             }
 
+            fx = Convert.ToInt32(temp);
             return fx;
         }
 
@@ -39,9 +50,9 @@ namespace GDXSim
             //check for exponential growth or decay
             double rate; //the rate at which it increases
             if (cmd.Equals("growth"))
-                rate = 1 + (args[4] / 100); //exponential growth
+                rate = 1 + (args[3] / 100); //exponential growth
             else
-                rate = 1 - (args[4] / 100); //exponential decay
+                rate = 1 - (args[3] / 100); //exponential decay
 
             //calculate
             temp = Math.Pow(rate, k);
@@ -51,47 +62,39 @@ namespace GDXSim
             return temp;
         }
 
-
-        public static double Sin(String cmd, double[] args)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmd"> Takes in a special command for advanced operations. "Degrees" indicates that input is in degrees, "radians" indicates radians.</param>
+        /// <param name="args"> Array contains all args required by the algorithm.
+        /// [0] holds the angle theta, [1] holds the horizontal shift, [2] holds the vertical shift, [3] holds the period, [4] holds amplitude</param>
+        /// <returns></returns>
+        public static double trig(String cmd, double[] args)
         {
-            double sin;
-            double angle = args[0];
+            double answer;
+            double angle = args[0]; double HS = args[1]; double VS = args[2]; double period = args[3]; double amp = args[4];
 
-            if (!(cmd.Equals("degrees")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
+            //add horizontal components
+            angle = angle / period;
+            angle = angle + HS;
 
-            //calculate sin
-            sin = Math.Sin(angle);
+            switch (cmd)
+            {
+                case "sin": answer = Math.Sin(angle);
+                    break;
+                case "cos": answer = Math.Cos(angle);
+                    break;
+                case "tan": answer = Math.Tan(angle);
+                    break;
+            }
 
-            return sin;
+            //add vertical components
+            answer = angle + VS;
+            answer = answer * amp;
+
+            return answer;
+
         }
 
-        public static double Cos(String cmd, double[] args)
-        {
-            double cos;
-            double angle = args[0];
-
-            if (!(cmd.Equals("radians")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
-
-            //calculate cos
-            cos = Math.Cos(angle);
-
-            return cos;
-        }
-
-        public static double Tan(String cmd, double[] args)
-        {
-            double tan;
-            double angle = args[0];
-
-            if (!(cmd.Equals("radians")))
-                angle = Math.PI * angle / 180.0; //value sent in was in degrees; convert to radians
-
-            //calculate sin
-            tan = Math.Atan(angle);
-
-            return tan;
-        }
     }
 }

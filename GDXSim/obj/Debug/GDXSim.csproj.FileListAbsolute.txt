@@ -1,1 +1,11 @@
 C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\bin\Debug\GDXSim.exe.config
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\bin\Debug\GDXSim.exe
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\bin\Debug\GDXSim.pdb
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.csprojResolveAssemblyReference.cache
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.ExponentialForm.resources
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.Form1.resources
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.Properties.Resources.resources
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.Selector.resources
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.csproj.GenerateResource.Cache
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.exe
+C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.pdb

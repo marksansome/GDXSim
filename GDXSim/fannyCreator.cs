@@ -13,10 +13,9 @@ namespace GDXSim
 {
     public partial class ExponentialForm
     {
-
         public void createfannys(int fannyNum)
         {
-            //panel1.Controls.Clear();
+            panel1.Controls.Clear();
             fannys.Clear();
             int yMod = 0;
             int xMod = 0;
@@ -35,21 +34,14 @@ namespace GDXSim
             {
                 sizeMod = sizeMod / 2;
             }
-
             int xLocation = 0;
             for (int j = 0; j < fannyNum; j++)
             {
-
-
-
-
-
                 if (xMod == 270 / sizeMod)
                 {
                     yMod++;
                     xMod = 0;
                 }
-
                 xLocation = sizeMod * xMod;
                 int yLocation = sizeMod * yMod;
                 /*if (j % 9 == 0)
