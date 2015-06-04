@@ -9,3 +9,5 @@ C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.Selector.resource
 C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.csproj.GenerateResource.Cache
 C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.exe
 C:\Users\marks\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.pdb
+C:\Users\Colin\Documents\GitHub\GDXSim\GDXSim\bin\Debug\GDXSim.exe.config
+C:\Users\Colin\Documents\GitHub\GDXSim\GDXSim\obj\Debug\GDXSim.exe
