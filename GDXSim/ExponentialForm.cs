@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GDX
+namespace GDXSim
 {
     public partial class ExponentialForm : Form
     {
@@ -41,17 +41,11 @@ namespace GDX
         private void timer1_Tick(object sender, EventArgs e)
         {
             //double oldFx = GDXSim.Algorithm.fx;
-            y = GDXSim.Algorithm.CalculateFX();
-            chart1.Series["Series1"].Points.AddXY(counter, y);
-
-            if (counter % 5 == 0)
-            {
-                SoundPlayer simpleSound = new SoundPlayer("C:/Users/marks/Desktop/sound.wav");
-                simpleSound.Play();
-            }
+            //y = GDXSim.Algorithm.CalculateFX();
+            chart1.Series["Series1"].Points.AddXY(counter, 10+counter);
 
             Random rnd = new Random();
-           creatfanny
+            createfannys(10 + counter);
             
             if (counter >= t)
             {
@@ -134,8 +128,6 @@ namespace GDX
         private void button2_Click(object sender, EventArgs e)//Generate
         {
             timer1.Start();
-            Random rnd = new Random();
-            spawnfannys(Convert.ToInt32(Math.Round(xo)), rnd);
         }
 
         private void button1_Click(object sender, EventArgs e)//Reset
@@ -147,83 +139,6 @@ namespace GDX
             y = 0;
             panel1.Controls.Clear();
             fannys.Clear();
-        }
-        #endregion
-
-        #region displaying images
-        public void spawnfannys(int i, Random rnd)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                int[] x = new int[i];
-                int[] y = new int[i];
-                double q = 50;
-                PictureBox pictureBox = new System.Windows.Forms.PictureBox();
-                fannys.Add(pictureBox);
-                x[j] = rnd.Next(0, 277);
-                y[j] = rnd.Next(0, 385);
-
-                pictureBox.Location = new System.Drawing.Point(x[j], y[j]);
-                pictureBox.Name = "fanny" + i;
-                if (i > 20)
-                {
-                    q = 50 * (.005 * i);
-                }
-
-                pictureBox.Size = new System.Drawing.Size(30, 30);
-                pictureBox.TabIndex = 0;
-                pictureBox.TabStop = false;
-                pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                pictureBox.Parent = panel1;
-                pictureBox.Image = global::WindowsFormsApplication4.Properties.Resources.img;
-            }
-        }
-        public void growfannys(Random rnd, int current, int previous)
-        {
-            int now = current - previous;
-            for (int j = 0; j < now; j++)
-            {
-                int[] x = new int[now];
-                int[] y = new int[now];
-                double q = 50;
-                PictureBox pictureBox = new System.Windows.Forms.PictureBox();
-                fannys.Add(pictureBox);
-                x[j] = rnd.Next(0, 277);
-                y[j] = rnd.Next(0, 385);
-
-                pictureBox.Location = new System.Drawing.Point(x[j], y[j]);
-                pictureBox.Name = "fanny" + now;
-                if (now > 20)
-                {
-                    q = 50 * (.005 * now);
-                }
-
-                pictureBox.Size = new System.Drawing.Size(30, 30);
-                pictureBox.TabIndex = 0;
-                pictureBox.TabStop = false;
-                pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                pictureBox.Parent = panel1;
-                pictureBox.Image = global::WindowsFormsApplication4.Properties.Resources.img;
-            }
-        }
-
-
-        public void destroyfannys(int current, int previous)
-        {
-
-            int now = previous - current;
-            while (now > 0 && panel1.Controls.Count > 0)
-            {
-                panel1.Controls.RemoveAt(0);
-                now--;
-            }
-            while (now > 0 && panel1.Controls.Count > 0)
-            {
-                fannys.RemoveAt(0);
-                now--;
-            }
         }
         #endregion
 

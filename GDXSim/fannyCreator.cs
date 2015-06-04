@@ -13,7 +13,6 @@ namespace GDXSim
 {
     public partial class ExponentialForm
     {
-        List<PictureBox> fannys = new List<PictureBox>();
 
         public void createfannys(int fannyNum)
         {
