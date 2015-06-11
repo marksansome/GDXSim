@@ -55,6 +55,12 @@
     <Compile Include="FannyCreator.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GeometryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeometryForm.Designer.cs">
+      <DependentUpon>GeometryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <EmbeddedResource Include="ExponentialForm.resx">
       <DependentUpon>ExponentialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeometryForm.resx">
+      <DependentUpon>GeometryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -115,6 +124,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GDXSim Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

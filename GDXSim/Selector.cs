@@ -23,5 +23,12 @@ namespace GDXSim
             exponentialForm.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GeometryForm geometryForm = new GeometryForm();
+            geometryForm.Show();
+            this.Hide();
+        }
     }
 }
