@@ -8,6 +8,8 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace GDXSim
 {
@@ -22,10 +24,15 @@ namespace GDXSim
 
         #region Variables
         Boolean decay, roundToInt;
-        double xo, t, period, rate;
+        double xo, t, period, rate, r100;
         int fx;
         int counter = 0;
         string ex = "growth";
+        string a = "a";
+        string sign = "+";
+        string r = "r";
+        string sT = "t";
+        string p = "p";
         #endregion
 
         #region Timer
@@ -55,6 +62,8 @@ namespace GDXSim
         {
             Decimal box1 = numericUpDown1.Value;
             xo = Convert.ToInt32(box1);
+            a = Convert.ToString(xo);
+            label8.Text = "y="+ a + "(1" + sign +  r + ")^(" + sT + "/" + p + ")";
             box1 = 0;
         }
 
@@ -62,6 +71,8 @@ namespace GDXSim
         {
             Decimal box3 = numericUpDown3.Value;
             period = Convert.ToInt32(box3);
+            p = Convert.ToString(period);
+            label8.Text = "y=" + a + "(1" + sign + r + ")^(" + sT + "/" + p + ")";
             box3 = 0;
         }
 
@@ -69,6 +80,8 @@ namespace GDXSim
         {
             Decimal box4 = numericUpDown4.Value;
             t = Convert.ToInt32(box4);
+            sT = Convert.ToString(t);
+            label8.Text = "y=" + a + "(1" + sign + r + ")^(" + sT + "/" + p + ")";
             box4 = 0;
         }
 
@@ -76,6 +89,9 @@ namespace GDXSim
         {
             Decimal box2 = numericUpDown2.Value;
             rate = Convert.ToInt32(box2);
+            r100 = rate / 100;
+            r = Convert.ToString(r100);
+            label8.Text = "y=" + a + "(1" + sign + r + ")^(" + sT + "/" + p + ")";
             box2 = 0;
         }
 
@@ -89,10 +105,14 @@ namespace GDXSim
             if (domainUpDown1.Text.Equals("Decay"))
             {
                 ex = "decay";
+                sign = "-";
+                label8.Text = "y=" + a + "(1" + sign + r + ")^(" + sT + "/" + p + ")";
             }
             else if (domainUpDown1.Text.Equals("Growth"))
             {
                 ex = "growth";
+                sign = "+";
+                label8.Text = "y=" + a + "(1" + sign + r + ")^(" + sT + "/" + p + ")";
             }
         }
 
@@ -112,6 +132,7 @@ namespace GDXSim
             fannys.Clear();
         }
         #endregion
+
 
     }
 }
