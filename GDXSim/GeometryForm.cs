@@ -133,6 +133,18 @@ namespace GDXSim
             box4 = 0;
         }
 
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selector selector = new Selector();
+            selector.Show();
+            this.Hide();
+        }
+
+        private void tutorialsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
 }

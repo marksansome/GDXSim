@@ -15,12 +15,11 @@ namespace GDXSim
     {
         public void createfannys(int fannyNum)
         {
-            panel1.Controls.Clear();
+            //panel1.Controls.Clear();
             fannys.Clear();
             int yMod = 0;
             int xMod = 0;
             int sizeMod = 30;
-            int xBounds = 270;
             // int yBounds = 390; 
             if (fannyNum > 2090)
             {
@@ -68,7 +67,7 @@ namespace GDXSim
                 pictureBox.TabStop = false;
                 pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
                 pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-                pictureBox.Parent = panel1;
+                //pictureBox.Parent = panel1;
                 pictureBox.Image = global::GDXSim.Properties.Resources.fanny_left;
                 xMod++;
             }

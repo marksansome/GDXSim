@@ -39,17 +39,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(127, 52);
+            this.label1.Location = new System.Drawing.Point(60, 74);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(514, 58);
+            this.label1.Size = new System.Drawing.Size(456, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Select your simulation";
+            this.label1.Text = "Please select a catagory";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(236, 293);
+            this.button2.Location = new System.Drawing.Point(177, 238);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 76);
+            this.button2.Size = new System.Drawing.Size(113, 62);
             this.button2.TabIndex = 2;
             this.button2.Text = "Trigonometric ";
             this.button2.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(79, 293);
+            this.button1.Location = new System.Drawing.Point(59, 238);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 76);
+            this.button1.Size = new System.Drawing.Size(113, 62);
             this.button1.TabIndex = 3;
             this.button1.Text = "Exponential";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(393, 293);
+            this.button3.Location = new System.Drawing.Point(295, 238);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 76);
+            this.button3.Size = new System.Drawing.Size(113, 62);
             this.button3.TabIndex = 4;
             this.button3.Text = "Geometry Calculator";
             this.button3.UseVisualStyleBackColor = true;
@@ -77,23 +81,25 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(550, 293);
+            this.button4.Location = new System.Drawing.Point(412, 238);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 76);
+            this.button4.Size = new System.Drawing.Size(113, 62);
             this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
+            this.button4.Text = "Tutorials";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // Selector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(586, 449);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Selector";
             this.Text = "Form2";
             this.ResumeLayout(false);

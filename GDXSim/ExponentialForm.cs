@@ -23,9 +23,8 @@ namespace GDXSim
         }
 
         #region Variables
-        Boolean decay, roundToInt;
         double xo, t, period, rate, r100;
-        int fx;
+        double fx;
         int counter = 0;
         string ex = "growth";
         string a = "a";
@@ -39,15 +38,11 @@ namespace GDXSim
         private void timer1_Tick(object sender, EventArgs e)
         {
             double [] a = {xo, counter, period, rate};
-            
-            //double oldFx = GDXSim.Algorithm.fx;
-            //y = GDXSim.Algorithm.CalculateFX();
             fx = Algorithm.CalculateFX(ex, a);
             Console.WriteLine(fx);
-            chart1.Series["Series1"].Points.AddXY(counter, fx);
-
-            Random rnd = new Random();
-            createfannys(fx);
+            chart1.Series["Series1"].Points.AddXY(counter,fx);
+            dataGridView1.Rows.Add(counter, Math.Round(fx, 2));
+            //createfannys(Convert.ToInt32(fx));
             
             if (counter >= t)
             {
@@ -125,20 +120,25 @@ namespace GDXSim
         {
             timer1.Stop();
             chart1.Series["Series1"].Points.Clear();
+            dataGridView1.Rows.Clear();
             counter = 0;
-
             fx = 0;
-            panel1.Controls.Clear();
+            //panel1.Controls.Clear();
             fannys.Clear();
         }
         #endregion
 
         private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Selector selector = new Selector();
+            selector.Show();
+            this.Hide();
         }
 
+        private void tutorialsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
