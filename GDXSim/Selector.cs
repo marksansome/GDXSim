@@ -30,5 +30,12 @@ namespace GDXSim
             geometryForm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TrigForm trigForm = new TrigForm();
+            trigForm.Show();
+            this.Hide();
+        }
     }
 }
