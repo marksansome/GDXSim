@@ -37,5 +37,12 @@ namespace GDXSim
             trigForm.Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Tutorials tutorials = new Tutorials();
+            tutorials.Show();
+            this.Hide();
+        }
     }
 }
