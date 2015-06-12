@@ -16,9 +16,9 @@ namespace GDXSim
     class Algorithm
     {
 
-        public static int fx; //last calculated value
+        public static double fx; //last calculated value
 
-        public static int CalculateFX(String cmd, double[] args)
+        public static double CalculateFX(String cmd, double[] args)
         {
             double temp = 0;
             switch (cmd)
@@ -34,8 +34,8 @@ namespace GDXSim
                 case "decay": temp = ex(cmd, args);
                     break;
             }
-
-            fx = Convert.ToInt32(temp);
+            fx = temp; //gg motherfuckedrs
+           // fx = Convert.ToInt32(temp);
             return fx;
         }
 
