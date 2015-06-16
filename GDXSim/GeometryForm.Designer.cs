@@ -103,13 +103,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button1.Location = new System.Drawing.Point(0, 25);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button1.Location = new System.Drawing.Point(0, 31);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 53);
             this.button1.TabIndex = 1;
@@ -120,13 +115,8 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button2.Location = new System.Drawing.Point(137, 25);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button2.Location = new System.Drawing.Point(183, 31);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 53);
             this.button2.TabIndex = 2;
@@ -137,13 +127,8 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button3.Location = new System.Drawing.Point(272, 25);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button3.Location = new System.Drawing.Point(363, 31);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 53);
             this.button3.TabIndex = 3;
@@ -151,20 +136,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-<<<<<<< HEAD
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GDXSim.Properties.Resources.rectangle;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 69);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 206);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-=======
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             // label1
             // 
             this.label1.AutoSize = true;
@@ -188,13 +159,8 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button4.Location = new System.Drawing.Point(554, 80);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button4.Location = new System.Drawing.Point(739, 98);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 78);
             this.button4.TabIndex = 5;
@@ -206,13 +172,8 @@
             // 
             this.domainUpDown1.Items.Add("Area");
             this.domainUpDown1.Items.Add("Perimeter");
-<<<<<<< HEAD
-            this.domainUpDown1.Location = new System.Drawing.Point(554, 58);
-            this.domainUpDown1.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.domainUpDown1.Location = new System.Drawing.Point(739, 71);
             this.domainUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.domainUpDown1.Name = "domainUpDown1";
             this.domainUpDown1.Size = new System.Drawing.Size(120, 22);
             this.domainUpDown1.TabIndex = 6;
@@ -230,26 +191,16 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-<<<<<<< HEAD
-            this.panel1.Location = new System.Drawing.Point(18, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.panel1.Location = new System.Drawing.Point(24, 123);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(963, 441);
             this.panel1.TabIndex = 0;
             // 
             // numericUpDown2
             // 
-<<<<<<< HEAD
-            this.numericUpDown2.Location = new System.Drawing.Point(425, 162);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.numericUpDown2.Location = new System.Drawing.Point(567, 199);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.numericUpDown2.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -262,13 +213,8 @@
             // 
             // numericUpDown1
             // 
-<<<<<<< HEAD
-            this.numericUpDown1.Location = new System.Drawing.Point(176, 37);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.numericUpDown1.Location = new System.Drawing.Point(235, 46);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -318,13 +264,8 @@
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.numericUpDown3);
             this.panel2.Controls.Add(this.pictureBox2);
-<<<<<<< HEAD
-            this.panel2.Location = new System.Drawing.Point(9, 72);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.panel2.Location = new System.Drawing.Point(12, 89);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(989, 475);
             this.panel2.TabIndex = 4;
@@ -332,15 +273,9 @@
             // domainUpDown2
             // 
             this.domainUpDown2.Items.Add("Area");
-<<<<<<< HEAD
-            this.domainUpDown2.Items.Add("Perimeter");
-            this.domainUpDown2.Location = new System.Drawing.Point(595, 56);
-            this.domainUpDown2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.domainUpDown2.Items.Add("Circumference");
             this.domainUpDown2.Location = new System.Drawing.Point(793, 69);
             this.domainUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.domainUpDown2.Name = "domainUpDown2";
             this.domainUpDown2.Size = new System.Drawing.Size(120, 22);
             this.domainUpDown2.TabIndex = 5;
@@ -369,13 +304,8 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button5.Location = new System.Drawing.Point(583, 104);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button5.Location = new System.Drawing.Point(777, 128);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 126);
             this.button5.TabIndex = 2;
@@ -385,13 +315,8 @@
             // 
             // numericUpDown3
             // 
-<<<<<<< HEAD
-            this.numericUpDown3.Location = new System.Drawing.Point(386, 167);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.numericUpDown3.Location = new System.Drawing.Point(515, 206);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.numericUpDown3.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -405,13 +330,8 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GDXSim.Properties.Resources.circle;
-<<<<<<< HEAD
-            this.pictureBox2.Location = new System.Drawing.Point(43, 29);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.pictureBox2.Location = new System.Drawing.Point(57, 36);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(669, 366);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -427,13 +347,8 @@
             this.panel3.Controls.Add(this.numericUpDown5);
             this.panel3.Controls.Add(this.numericUpDown4);
             this.panel3.Controls.Add(this.pictureBox3);
-<<<<<<< HEAD
-            this.panel3.Location = new System.Drawing.Point(22, 80);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.panel3.Location = new System.Drawing.Point(29, 98);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(940, 462);
             this.panel3.TabIndex = 5;
@@ -451,13 +366,8 @@
             // 
             this.domainUpDown3.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.domainUpDown3.Items.Add("Area");
-<<<<<<< HEAD
-            this.domainUpDown3.Location = new System.Drawing.Point(530, 50);
-            this.domainUpDown3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.domainUpDown3.Location = new System.Drawing.Point(707, 62);
             this.domainUpDown3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.domainUpDown3.Name = "domainUpDown3";
             this.domainUpDown3.Size = new System.Drawing.Size(120, 26);
             this.domainUpDown3.TabIndex = 5;
@@ -476,13 +386,8 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
-            this.button6.Location = new System.Drawing.Point(509, 86);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.button6.Location = new System.Drawing.Point(679, 106);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 119);
             this.button6.TabIndex = 3;
@@ -492,13 +397,8 @@
             // 
             // numericUpDown5
             // 
-<<<<<<< HEAD
-            this.numericUpDown5.Location = new System.Drawing.Point(237, 152);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.numericUpDown5.Location = new System.Drawing.Point(316, 187);
             this.numericUpDown5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.numericUpDown5.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -511,13 +411,8 @@
             // 
             // numericUpDown4
             // 
-<<<<<<< HEAD
-            this.numericUpDown4.Location = new System.Drawing.Point(172, 254);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.numericUpDown4.Location = new System.Drawing.Point(229, 313);
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.numericUpDown4.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -531,13 +426,8 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GDXSim.Properties.Resources.triangle;
-<<<<<<< HEAD
-            this.pictureBox3.Location = new System.Drawing.Point(53, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.pictureBox3.Location = new System.Drawing.Point(71, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(461, 364);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -781,16 +671,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-<<<<<<< HEAD
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "GeometryForm";
-            this.Text = "GDX Simulator";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-=======
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GeometryForm";
             this.Text = "GeometryForm";
->>>>>>> 3db24f96772cd62c049d87b22071eb8022d64ac4
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
