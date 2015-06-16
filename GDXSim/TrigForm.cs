@@ -16,5 +16,19 @@ namespace GDXSim
         {
             InitializeComponent();
         }
+
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selector selector = new Selector();
+            selector.Show();
+            this.Hide();
+        }
+
+        private void tutorialsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tutorials tutorial = new Tutorials();
+            tutorial.Show();
+            this.Hide();
+        }
     }
 }

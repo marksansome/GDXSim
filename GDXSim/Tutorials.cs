@@ -31,5 +31,12 @@ namespace GDXSim
         {
             this.webBrowser1.Url = new System.Uri("https://www.mathsisfun.com/geometry/index.html", System.UriKind.Absolute);
         }
+
+        private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selector selector = new Selector();
+            selector.Show();
+            this.Hide();
+        }
     }
 }

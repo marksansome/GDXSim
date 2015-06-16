@@ -137,7 +137,9 @@ namespace GDXSim
 
         private void tutorialsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Tutorials tutorial = new Tutorials();
+            tutorial.Show();
+            this.Hide();
         }
     }
 }
