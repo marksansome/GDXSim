@@ -22,6 +22,7 @@ namespace GDXSim
             panel2.Hide();
             panel3.Hide();
             panel4.Hide();
+            panel5.Hide();
         }
          
         // initialize panels 
@@ -31,30 +32,46 @@ namespace GDXSim
             panel2.Hide();
             panel3.Hide();
             panel4.Hide();
+            panel5.Hide();
+            label13.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label13.Hide();
             panel2.Show();
             panel1.Hide();
             panel3.Hide();
             panel4.Hide();
+            panel5.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            label13.Hide();
             panel3.Show();
             panel1.Hide();
             panel2.Hide();
             panel4.Hide();
-
+            panel5.Hide();
         }
         private void button7_Click(object sender, EventArgs e)
         {
+            label13.Hide();
             panel4.Show();
             panel3.Hide();
             panel1.Hide();
             panel2.Hide();
+            panel5.Hide();
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            label13.Hide();
+            panel4.Hide();
+            panel3.Hide();
+            panel1.Hide();
+            panel2.Hide();
+            panel5.Show();
         }
 
 
@@ -110,7 +127,7 @@ namespace GDXSim
                 answer = Math.PI * Math.Pow(radius, 2);
                 
             }
-            else if (domainUpDown2.Text == "Perimeter")
+            else if (domainUpDown2.Text == "Circumference")
             {
                 answer = 2 * Math.PI * radius;
                 
@@ -163,9 +180,6 @@ namespace GDXSim
             }
         }
 
-        
-
-
         // back to selector 
         private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -176,8 +190,14 @@ namespace GDXSim
 
         private void tutorialsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Tutorials tutorials = new Tutorials();
+            tutorials.Show();
+            this.Hide();
 
         }
+
+        
+
 
         // rectangular prism
 
@@ -199,6 +219,30 @@ namespace GDXSim
         {
             decimal box = numericUpDown8.Value;
             width = Convert.ToDouble(box);
+            box = 0;
+        }
+
+        //Sphere
+        
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (domainUpDown5.Text == "Volume")
+            {
+                answer = (4 / 3) * Math.PI * Math.Pow(radius, 3);
+            }
+            
+            else if (domainUpDown5.Text == "Surface Area")
+            {
+                answer = 4 * Math.PI * Math.Pow(radius, 2);                
+            }
+            label12.Text = Convert.ToString(Math.Round(answer,2));
+        }
+
+        private void numericUpDown9_ValueChanged(object sender, EventArgs e)
+        {
+            decimal box = numericUpDown9.Value;
+            radius = Convert.ToDouble(box);
             box = 0;
         }
     }
