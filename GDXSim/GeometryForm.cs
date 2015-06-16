@@ -13,7 +13,7 @@ namespace GDXSim
     public partial class GeometryForm : Form
     {
         double length = 0 , width = 0, height = 0, bas = 0, radius = 0, answer = 0;
-
+        
         // initialize form , hide panels 
         public GeometryForm()
         {
@@ -21,14 +21,16 @@ namespace GDXSim
             panel1.Hide();
             panel2.Hide();
             panel3.Hide();
+            panel4.Hide();
         }
-
+         
         // initialize panels 
         private void button1_Click(object sender, EventArgs e)
         {
             panel1.Show();
             panel2.Hide();
             panel3.Hide();
+            panel4.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace GDXSim
             panel2.Show();
             panel1.Hide();
             panel3.Hide();
+            panel4.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -43,7 +46,15 @@ namespace GDXSim
             panel3.Show();
             panel1.Hide();
             panel2.Hide();
+            panel4.Hide();
 
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panel4.Show();
+            panel3.Hide();
+            panel1.Hide();
+            panel2.Hide();
         }
 
 
@@ -108,6 +119,11 @@ namespace GDXSim
             label5.Text = Convert.ToString(Math.Round(answer,2));
         }
 
+       
+
+
+
+
 
         // Tr-eye-angle
         private void button6_Click(object sender, EventArgs e)
@@ -133,6 +149,24 @@ namespace GDXSim
             box4 = 0;
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (domainUpDown4.Text == "Volume")
+            {
+                answer = length * width * height;
+                label10.Text = Convert.ToString(answer);
+            }
+            else if (domainUpDown4.Text == "Surface Area")
+            {
+                answer = length * width * 2 + length * height * 2 + width * height * 2;
+                label10.Text = Convert.ToString(answer);
+            }
+        }
+
+        
+
+
+        // back to selector 
         private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Selector selector = new Selector();
@@ -145,6 +179,28 @@ namespace GDXSim
 
         }
 
+        // rectangular prism
+
+        private void numericUpDown7_ValueChanged(object sender, EventArgs e)
+        {
+            decimal box = numericUpDown7.Value;
+            height = Convert.ToDouble(box);
+            box = 0;
+        }
+
+        private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            decimal box = numericUpDown6.Value;
+            length = Convert.ToDouble(box);
+            box = 0;
+        }
+
+        private void numericUpDown8_ValueChanged(object sender, EventArgs e)
+        {
+            decimal box = numericUpDown8.Value;
+            width = Convert.ToDouble(box);
+            box = 0;
+        }
     }
 
 }
