@@ -83,6 +83,16 @@ namespace GDXSim.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cube {
+            get {
+                object obj = ResourceManager.GetObject("Cube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fanny_left {
             get {
                 object obj = ResourceManager.GetObject("fanny_left", resourceCulture);
@@ -106,6 +116,16 @@ namespace GDXSim.Properties {
         internal static System.Drawing.Bitmap rectangle {
             get {
                 object obj = ResourceManager.GetObject("rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sphere {
+            get {
+                object obj = ResourceManager.GetObject("Sphere", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
