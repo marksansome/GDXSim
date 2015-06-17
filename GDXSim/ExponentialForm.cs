@@ -39,7 +39,6 @@ namespace GDXSim
         {
             double [] a = {xo, counter, period, rate};
             fx = Algorithm.CalculateFX(ex, a);
-            Console.WriteLine(fx);
             chart1.Series["Series1"].Points.AddXY(counter,fx);
             dataGridView1.Rows.Add(counter, Math.Round(fx, 2));
             //createfannys(Convert.ToInt32(fx));

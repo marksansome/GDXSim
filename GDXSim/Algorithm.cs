@@ -36,6 +36,7 @@ namespace GDXSim
             }
             fx = temp; //gg motherfuckedrs
            // fx = Convert.ToInt32(temp);
+            Console.WriteLine(fx);
             return fx;
         }
 
