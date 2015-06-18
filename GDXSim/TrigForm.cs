@@ -36,12 +36,6 @@ namespace GDXSim
         double trigA;
         int counter = 0;
         string trig = "sin";
-        string angleS = "a";
-        string HSS = "+";
-        string VSS = "r";
-        string periodS = "t";
-        string ampS = "p";
-        string tS = "t";
         #endregion
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -62,7 +56,7 @@ namespace GDXSim
         {
             Decimal box1 = numericUpDown1.Value;
             period = Convert.ToInt32(box1);
-            label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+            label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             box1 = 0;
         }
 
@@ -70,31 +64,31 @@ namespace GDXSim
         {
             Decimal box2 = numericUpDown2.Value;
             amp = Convert.ToInt32(box2);
-            label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+            label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             box2 = 0;
         }
 
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
-            Decimal box3 = numericUpDown1.Value;
+            Decimal box3 = numericUpDown3.Value;
             HS = Convert.ToInt32(box3);
-            label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+            label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             box3 = 0;
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
-            Decimal box4 = numericUpDown1.Value;
+            Decimal box4 = numericUpDown4.Value;
             VS = Convert.ToInt32(box4);
-            label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+            label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             box4 = 0;
         }
 
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
-            Decimal box5 = numericUpDown1.Value;
+            Decimal box5 = numericUpDown5.Value;
             t = Convert.ToInt32(box5);
-            label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+            label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             box5 = 0;
         }
 
@@ -103,17 +97,17 @@ namespace GDXSim
             if (domainUpDown1.Text.Equals("cos"))
             {
                 trig = "cos";
-                label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+                label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             }
             else if (domainUpDown1.Text.Equals("tan"))
             {
                 trig = "tan";
-                label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+                label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             }
             else if (domainUpDown1.Text.Equals("sin"))
             {
                 trig = "sin";
-                label8.Text = "y=" + ampS + " " + trig + "(" + t + "/" + period + "-" + HS + ")+" + VS;
+                label8.Text = "y=" + amp + " " + trig + "(x/" + period + "-" + HS + ")+" + VS;
             }
         }
 
@@ -130,10 +124,5 @@ namespace GDXSim
             counter = 0;
             trigA = 0;
         }
-
-        
-
-        
-
     }
 }

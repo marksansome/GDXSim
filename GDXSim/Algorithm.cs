@@ -17,7 +17,6 @@ namespace GDXSim
     {
 
         public static double fx; //last calculated value
-
         public static double CalculateFX(String cmd, double[] args)
         {
             double temp = 0;
@@ -34,10 +33,41 @@ namespace GDXSim
                 case "decay": temp = ex(cmd, args);
                     break;
             }
-            fx = temp; //gg motherfuckedrs
-           // fx = Convert.ToInt32(temp);
-            Console.WriteLine(fx);
+
+            if (check(temp))
+                fx = temp; //complete calculations
+            else
+                Console.WriteLine("error at operation sign " + cmd);
+
             return fx;
+        }
+
+        private static Boolean check(double temp)
+        {
+            try
+            {
+                if (double.IsPositiveInfinity(temp))
+                {
+                    //it is a positive infinite number
+                    return false;
+                }
+                else if (double.IsNegativeInfinity(temp))
+                {
+                    //it is negative infinite
+                    return false;
+                }
+
+                //try doing basic math to see if anything wrong
+                temp = (temp + 1) / 1000;
+
+                //otherwise nothing wrong
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
         }
 
         public static double ex(String cmd, double[] args)
@@ -72,30 +102,30 @@ namespace GDXSim
         /// <returns></returns>
         public static double trig(String cmd, double[] args)
         {
-            double answer;
+            double answer = 0;
             double angle = args[0]; double HS = args[1]; double VS = args[2]; double period = args[3]; double amp = args[4];
 
             //add horizontal components
-            angle = angle / period;
-            angle = angle + HS;
+            answer = angle / period;
+            answer = answer + HS;
+            Console.WriteLine("angle to be passed: " + answer);
 
             switch (cmd)
             {
-                case "sin": answer = Math.Sin(angle);
+                case "sin": answer = Math.Sin(answer);
                     break;
-                case "cos": answer = Math.Cos(angle);
+                case "cos": answer = Math.Cos(answer);
                     break;
-                case "tan": answer = Math.Tan(angle);
+                case "tan": answer = Math.Tan(answer);
                     break;
             }
 
+            Console.WriteLine("answer gotten : " + answer);
             //add vertical components
-            answer = angle + VS;
             answer = answer * amp;
+            answer = answer + VS;
 
             return answer;
-
         }
-
     }
 }
